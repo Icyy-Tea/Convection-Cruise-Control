@@ -8,6 +8,7 @@ function switchTab(sectionId, button) {
     });
 
     const section = document.getElementById(sectionId);
+
     if (section) {
         section.style.display = "block";
     }
@@ -19,18 +20,26 @@ function switchTab(sectionId, button) {
 
 function closeStreamPortal() {
     const portal = document.getElementById("inline-stream-layer");
-    portal.style.display = "none";
+
+    if (portal) {
+        portal.style.display = "none";
+    }
 }
 
 function reloadStreamPortal() {
-    const iframe = document.getElementById(
-        "Convection Current Cruise-secure-iframe"
+    const iframe = document.getElementByElementById(
+        "secure-iframe"
     );
-    iframe.src = iframe.src;
+
+    if (iframe) {
+        iframe.src = iframe.src;
+    }
 }
 
 function toggleuserFullscreen() {
     const portal = document.getElementById("inline-stream-layer");
+
+    if (!portal) return;
 
     if (!document.fullscreenElement) {
         portal.requestFullscreen();
@@ -40,5 +49,6 @@ function toggleuserFullscreen() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    switchTab("home-section", document.getElementById("nav-home"));
+    const homeButton = document.getElementById("nav-home");
+    switchTab("home-section", homeButton);
 });
