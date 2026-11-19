@@ -1,52 +1,18 @@
-function switchTab(sectionId, button) {
-    document.querySelectorAll(".section").forEach(section => {
-        section.style.display = "none";
-    });
+const portsData = {
+  ridge: {
+    badge: "Port 1 • Mid-Ocean Ridge",
+    title: "Mid-Atlantic Ridge (Thingvellir, Iceland)",
+    location: "📍 North Atlantic Ocean (64.2559° N, 21.1295° W)",
+    attraction:
+      "Snorkel or dive right between the North American and Eurasian tectonic plates in Iceland’s crystal-clear Silfra Fissure—one of the only places on Earth where a mid-ocean ridge rises above sea level.",
+    science:
+      "Deep within the mantle, hot, less-dense rock rises upward due to <strong>convection currents</strong>. As this rising heat pushes beneath the crust, it forces the North American and Eurasian plates apart at a <strong>divergent boundary</strong>. Magma wells up into the gap, cools, and hardens into new basaltic oceanic crust, building an underwater mountain chain.",
+    terms: ["Convection Currents", "Divergent Boundary", "Seafloor Spreading", "Magma"],
+    mapEmbed:
+      "https://openstreetmap.org",
+    mapLabel: "Map: Thingvellir National Park & Mid-Atlantic Ridge, Iceland"
+  },
 
-    document.querySelectorAll(".nav-tab-btn").forEach(tab => {
-        tab.classList.remove("active");
-    });
-
-    const section = document.getElementById(sectionId);
-
-    if (section) {
-        section.style.display = "block";
-    }
-
-    if (button) {
-        button.classList.add("active");
-    }
-}
-
-function closeStreamPortal() {
-    const portal = document.getElementById("inline-stream-layer");
-
-    if (portal) {
-        portal.style.display = "none";
-    }
-}
-
-function reloadStreamPortal() {
-    const iframe = document.getElementById("secure-iframe");
-
-    if (iframe) {
-        iframe.src = iframe.src;
-    }
-}
-
-function toggleuserFullscreen() {
-    const portal = document.getElementById("inline-stream-layer");
-
-    if (!portal) return;
-
-    if (!document.fullscreenElement) {
-        portal.requestFullscreen();
-    } else {
-        document.exitFullscreen();
-    }
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-    const homeButton = document.getElementById("nav-home");
-    switchTab("home-section", homeButton);
-});
+/* 
+   Ahhhhhhhh pen pineapple apple pen :O
+*/
