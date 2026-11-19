@@ -27,9 +27,7 @@ function closeStreamPortal() {
 }
 
 function reloadStreamPortal() {
-    const iframe = document.getElementByElementById(
-        "secure-iframe"
-    );
+    const iframe = document.getElementById("secure-iframe");
 
     if (iframe) {
         iframe.src = iframe.src;
