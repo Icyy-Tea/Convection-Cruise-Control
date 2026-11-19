@@ -8,9 +8,15 @@
 </head>
 <body>
 
+  <!-- Top Promo Strip -->
+  <div class="promo-bar">
+    <span>[promo label]:</span> [short announcement]
+  </div>
+
+  <!-- Sticky Navbar -->
   <nav class="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="logo">🚢 [Cruise name here idk what it should be]</a>
+      <a href="index.html" class="logo">🚢 [cruise name]</a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="ridge.html">Mid-Ocean Ridge</a></li>
@@ -22,41 +28,151 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <header class="hero">
-    <h1>🌊 [main cruise heading</h1>
-    <p>[write senetnces about the cruises and stuff u bums]</p>
-    <a href="ridge.html" class="btn-primary">Start Tour →</a>
+    <div class="hero-eyebrow">[short tagline]</div>
+    <h1>🌊 [cruise title]</h1>
+    <p>[1-2 sentences introducing your cruise]</p>
+    <a href="ridge.html" class="btn-primary">[button text] →</a>
   </header>
 
+  <!-- Booking Bar -->
+  <div class="container">
+    <div class="booking-bar">
+      <div class="booking-field">
+        <label for="port-select">[dropdown 1 label]</label>
+        <select id="port-select">
+          <option value="ridge.html">Mid-Ocean Ridge</option>
+          <option value="trench.html">Trench</option>
+          <option value="volcano.html">Volcano</option>
+          <option value="mountain.html">Mountain</option>
+        </select>
+      </div>
+      <div class="booking-field">
+        <label for="sail-date">[dropdown 2 label]</label>
+        <select id="sail-date">
+          <option>[option 1]</option>
+          <option>[option 2]</option>
+          <option>[option 3]</option>
+        </select>
+      </div>
+      <div class="booking-field">
+        <label for="guests">[dropdown 3 label]</label>
+        <select id="guests">
+          <option>[option 1]</option>
+          <option>[option 2]</option>
+          <option>[option 3]</option>
+        </select>
+      </div>
+      <button class="btn-primary" onclick="window.location.href=document.getElementById('port-select').value">
+        [go]
+      </button>
+    </div>
+  </div>
+
   <main class="container section">
-    <div class="card">
-      <h2>🔥 Mantle Convection</h2>
-      <p>[paragraph explaining how convection currenrs unb hteh mantle move tectnoic plants]</p>
+    <!-- 4 Ports Itinerary Cards -->
+    <div class="section-header">
+      <span>[small label]</span>
+      <h2>[section heading]</h2>
     </div>
 
+    <div class="itinerary-grid">
+      <div class="itinerary-card">
+        <img src="assets/map-ridge.png" alt="Mid-Ocean Ridge">
+        <div class="itinerary-body">
+          <div class="itinerary-tag">Port 1 • Mid-Ocean Ridge</div>
+          <h3>[mid-ocean ridge name]</h3>
+          <p>[short sentence about this stop]</p>
+        </div>
+        <div class="itinerary-price">
+          <div class="price-text">
+            <small>[price label]</small>
+            <strong>$[price]</strong>
+          </div>
+          <a href="ridge.html" class="btn-outline">[link text]</a>
+        </div>
+      </div>
+
+      <div class="itinerary-card">
+        <img src="assets/map-trench.png" alt="Trench">
+        <div class="itinerary-body">
+          <div class="itinerary-tag">Port 2 • Trench</div>
+          <h3>[trench name]</h3>
+          <p>[short sentence about this stop]</p>
+        </div>
+        <div class="itinerary-price">
+          <div class="price-text">
+            <small>[price label]</small>
+            <strong>$[price]</strong>
+          </div>
+          <a href="trench.html" class="btn-outline">[link text]</a>
+        </div>
+      </div>
+
+      <div class="itinerary-card">
+        <img src="assets/map-volcano.png" alt="Volcano">
+        <div class="itinerary-body">
+          <div class="itinerary-tag">Port 3 • Volcano</div>
+          <h3>[volcano name]</h3>
+          <p>[short sentence about this stop]</p>
+        </div>
+        <div class="itinerary-price">
+          <div class="price-text">
+            <small>[price label]</small>
+            <strong>$[price]</strong>
+          </div>
+          <a href="volcano.html" class="btn-outline">[link text]</a>
+        </div>
+      </div>
+
+      <div class="itinerary-card">
+        <img src="assets/map-mountain.png" alt="Mountain">
+        <div class="itinerary-body">
+          <div class="itinerary-tag">Port 4 • Mountain</div>
+          <h3>[mountain name]</h3>
+          <p>[short sentence about this stop]</p>
+        </div>
+        <div class="itinerary-price">
+          <div class="price-text">
+            <small>[price label]</small>
+            <strong>$[price]</strong>
+          </div>
+          <a href="mountain.html" class="btn-outline">[link text]</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mantle Convection Explanation -->
+    <div class="card">
+      <h2>🔥 Mantle Convection</h2>
+      <p>[explain how convection currents in the mantle heat up, rise, cool down, sink, and move the tectonic plates]</p>
+    </div>
+
+    <!-- Vocabulary -->
     <h2>📖 Vocabulary</h2>
     <div class="vocab-grid">
       <div class="vocab-box">
         <h3>Convection</h3>
-        <p>[definitino]</p>
+        <p>[define convection]</p>
       </div>
       <div class="vocab-box">
         <h3>Divergent Boundary</h3>
-        <p>[defintiion]</p>
+        <p>[define divergent boundary]</p>
       </div>
       <div class="vocab-box">
         <h3>Convergent Boundary</h3>
-        <p>[define it lolololol</p>
+        <p>[define convergent boundary]</p>
       </div>
       <div class="vocab-box">
         <h3>Subduction Zone</h3>
-        <p>[haha u haev to define it]</p>
+        <p>[define subduction zone]</p>
       </div>
     </div>
   </main>
 
   <footer class="footer">
-    [names + class periods >:( ]
+    [your names and class period]
   </footer>
 
 </body>
