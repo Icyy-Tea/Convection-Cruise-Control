@@ -1,50 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convection Current Cruise</title>
-
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantle Voyages | Convection Current Cruise</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="inline-stream-layer" class="fullscreen-user-layer" style="display: none;">
-        <div class="user-control-header">
-            <button class="close-stream-btn" onclick="closeStreamPortal()">← Back</button>
-            <span id="active-stream-title"></span>
-            <div style="margin-left: auto; display: flex; gap: 8px;">
-                <button class="close-stream-btn" onclick="reloadStreamPortal()">↻ Reload</button>
-                <button class="close-stream-btn" onclick="toggleuserFullscreen()">⛶ Fullscreen</button>
-            </div>
-        </div>
-        <div class="stream-frame-container">
-            <iframe id="secure-iframe" src="" sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups allow-modals" allowfullscreen></iframe>
-        </div>
+
+
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">🚢 Mantle Voyages</div>
+      <ul class="nav-links">
+        <li><a href="#overview">The Engine</a></li>
+        <li><a href="#ports">Ports of Call</a></li>
+        <li><a href="#vocab">Key Terms</a></li>
+        <li><a href="#citations">Works Cited</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>The Convection Current Cruise</h1>
+      <p>Sail across Earth’s shifting tectonic plates to explore the planet’s most dramatic geological wonders.</p>
+      <a href="#ports" class="btn-primary">Explore Our 4 Ports of Call</a>
+    </div>
+  </header>
+
+  <!-- Mantle Convection -->
+  <section id="overview" class="container section">
+    <h2>What Powers Our Voyage? Mantle Convection</h2>
+    <p class="lead">
+      Beneath Earth's solid crust lies the hot, semi-solid <strong>mantle</strong>. Deep inside the Earth, intense heat from the core warms the lower mantle rock, making it less dense so it rises toward the surface. As it nears the crust, it cools, becomes denser, and sinks back down. This continuous circular motion is called a <strong>convection current</strong>—the giant conveyor belt that pushes and pulls Earth's tectonic plates into each other and apart.
+    </p>
+  </section>
+
+  <!-- four ports of call-->
+  <section id="ports" class="container section">
+    <h2>Itinerary: 4 Geological Ports of Call</h2>
+    <p class="subtitle">Filter by landform or view all four destinations, scientific explanations, and global location maps below.</p>
+
+    <div class="port-tabs">
+      <button class="tab-btn active" data-port="all">Show All 4 Ports</button>
+      <button class="tab-btn" data-port="ridge">1. Mid-Ocean Ridge</button>
+      <button class="tab-btn" data-port="trench">2. Ocean Trench</button>
+      <button class="tab-btn" data-port="volcano">3. Volcano</button>
+      <button class="tab-btn" data-port="mountain">4. Mountain Range</button>
     </div>
 
-    <div class="app-shell">
-        <aside class="left-sidebar">
-            <div class="brand" onclick="switchTab('home-section', document.getElementById('nav-home'))">
-                <span class="brand-icon"> </span> Convection Current Cruise
-            </div>
-
-            <nav class="side-nav">
-                <button id="nav-home" class="nav-tab-btn active" onclick="switchTab('home-section', this)">Home</button>
-                <button id="nav-midoceanridge" class="nav-tab-btn" onclick="switchTab('midoceanridge-section', this)">Mid-Ocean Ridge</button>
-                <button id="nav-trench" class="nav-tab-btn" onclick="switchTab('trench-section', this)">Trench</button>
-                <button id="nav-volcano" class="nav-tab-btn" onclick="switchTab('volcano-section', this)">Volcano</button>
-                <button id="nav-mountain" class="nav-tab-btn" onclick="switchTab('mountain-section', this)">Mountain</button>
-            </nav>
-
-            <div class="sidebar-promo-card">
-                <div class="promo-title">Change Later</div>
-            </div>
-        </aside>
+    <div id="port-display" class="ports-stack">
+ 
     </div>
+  </section>
 
-    <script src="./app.js"></script>
+  <!-- Vocab Definitions -->
+  <section id="vocab" class="container section">
+    <h2>Passenger Field Guide: Essential Vocabulary</h2>
+    <div class="vocab-grid">
+      <div class="vocab-card">
+        <h3>Convection</h3>
+        <p>The circular movement of heated, less-dense mantle material rising and cooler, denser material sinking, which drives plate tectonics.</p>
+      </div>
+      <div class="vocab-card">
+        <h3>Divergent Boundary</h3>
+        <p>A tectonic boundary where two plates move away from each other, allowing magma to rise and create new crust.</p>
+      </div>
+      <div class="vocab-card">
+        <h3>Convergent Boundary</h3>
+        <p>A tectonic boundary where two plates collide, resulting in either subduction or mountain building.</p>
+      </div>
+      <div class="vocab-card">
+        <h3>Subduction Zone</h3>
+        <p>A region at a convergent boundary where a denser oceanic plate sinks beneath a less-dense plate into the mantle.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sources/Cite Works -->
+  <footer id="citations" class="footer">
+    <div class="container">
+      <h2>Works Cited</h2>
+      <ul class="citation-list">
+        <li><strong>USGS (U.S. Geological Survey):</strong> "Understanding Plate Motions." <em>This Dynamic Earth: The Story of Plate Tectonics</em>. https://usgs.gov</li>
+        <li><strong>National Geographic Society:</strong> "Plate Tectonics, Mid-Ocean Ridges, and Ocean Trenches." <em>National Geographic Education</em>. https://nationalgeographic.org</li>
+        <li><strong>Smithsonian Institution:</strong> "Global Volcanism Program: Mount Fuji." <em>National Museum of Natural History</em>. https://si.edu</li>
+        <li><strong>Maps & Geographic Coordinates:</strong> Embedded geographic map data provided by <em>OpenStreetMap</em> contributors. https://openstreetmap.org</li>
+        <li><strong>Class Textbook Reference:</strong> Earth Science Plate Tectonics Unit (Pages 23–25, 32, 80–81, 89–91).</li>
+      </ul>
+      <p class="copyright">Created for Earth Science Assessment — Convection Current Cruise</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
