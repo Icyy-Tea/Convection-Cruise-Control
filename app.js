@@ -38,3 +38,7 @@ function toggleuserFullscreen() {
         document.exitFullscreen();
     }
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+    switchTab("home-section", document.getElementById("nav-home"));
+});
