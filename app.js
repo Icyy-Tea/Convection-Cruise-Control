@@ -12,14 +12,7 @@ const portsData = {
     coords: [64.2559, -21.1295],
     zoom: 6,
     mapLabel: "[PLACEHOLDER: Map Caption for Your Mid-Ocean Ridge Location]"
-  },
-
-
-    /* 
-   Ahhhhhhhh pen pineapple apple pen :O
-  */
-
-  
+  },  
   trench: {
     id: "trench",
     badge: "Port 2 • Ocean Trench",
