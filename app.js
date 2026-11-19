@@ -13,6 +13,12 @@ const portsData = {
     zoom: 6,
     mapLabel: "Map: Thingvellir National Park & Mid-Atlantic Ridge, Iceland"
   },
+
+  /* 
+   Ahhhhhhhh pen pineapple apple pen :O
+  */
+
+  
   trench: {
     id: "trench",
     badge: "Port 2 • Ocean Trench",
