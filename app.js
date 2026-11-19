@@ -1,5 +1,6 @@
 const portsData = {
   ridge: {
+    id: "ridge",
     badge: "Port 1 • Mid-Ocean Ridge",
     title: "Mid-Atlantic Ridge (Thingvellir, Iceland)",
     location: "📍 North Atlantic Ocean (64.2559° N, 21.1295° W)",
@@ -8,17 +9,12 @@ const portsData = {
     science:
       "Deep within the mantle, hot, less-dense rock rises upward due to <strong>convection currents</strong>. As this rising heat pushes beneath the crust, it forces the North American and Eurasian plates apart at a <strong>divergent boundary</strong>. Magma wells up into the gap, cools, and hardens into new basaltic oceanic crust, building an underwater mountain chain.",
     terms: ["Convection Currents", "Divergent Boundary", "Seafloor Spreading", "Magma"],
-    mapEmbed:
-      "https://openstreetmap.org",
+    coords: [64.2559, -21.1295],
+    zoom: 6,
     mapLabel: "Map: Thingvellir National Park & Mid-Atlantic Ridge, Iceland"
   },
-
-/* 
-   Ahhhhhhhh pen pineapple apple pen :O
-*/
-
-
-    trench: {
+  trench: {
+    id: "trench",
     badge: "Port 2 • Ocean Trench",
     title: "The Mariana Trench (Challenger Deep)",
     location: "📍 Western Pacific Ocean (11.3733° N, 142.5917° E)",
@@ -27,14 +23,12 @@ const portsData = {
     science:
       "As mantle rock cools near the surface, <strong>convection currents</strong> sink back toward the core, pulling tectonic plates together at a <strong>convergent boundary</strong>. Here, the older, denser Pacific Plate collides with the lighter Philippine Sea Plate. Because it is heavier, the Pacific Plate bends and plunges downward in a <strong>subduction zone</strong>, carving a deep V-shaped canyon into the ocean floor.",
     terms: ["Convection", "Convergent Boundary", "Subduction Zone", "Density"],
-    mapEmbed:
-      "https://openstreetmap.org",
+    coords: [11.3733, 142.5917],
+    zoom: 5,
     mapLabel: "Map: Mariana Trench in the Western Pacific Ocean"
   },
-
-
-
-    volcano: {
+  volcano: {
+    id: "volcano",
     badge: "Port 3 • Volcano",
     title: "Mount Fuji (Honshu, Japan)",
     location: "📍 Honshu Island, Japan (35.3606° N, 138.7274° E)",
@@ -43,16 +37,12 @@ const portsData = {
     science:
       "Driven by mantle <strong>convection</strong>, the dense oceanic Pacific and Philippine plates collide with the continental Eurasian Plate at a <strong>convergent boundary</strong>. As the oceanic crust is forced into the <strong>subduction zone</strong>, extreme heat and pressure melt the rock into magma. Because this magma is less dense than surrounding solid rock, it rises through fractures in the crust and erupts onto the surface, building layers of lava and ash.",
     terms: ["Convection", "Convergent Boundary", "Subduction Zone", "Magma & Lava"],
-    mapEmbed:
-      "https://openstreetmap.org",
+    coords: [35.3606, 138.7274],
+    zoom: 7,
     mapLabel: "Map: Mount Fuji along the Pacific Ring of Fire, Japan"
   },
-
-
-
-
-
-    mountain: {
+  mountain: {
+    id: "mountain",
     badge: "Port 4 • Mountain Range",
     title: "The Himalayas (Mount Everest Region)",
     location: "📍 Border of Nepal & Tibet (27.9881° N, 86.9250° E)",
@@ -61,13 +51,11 @@ const portsData = {
     science:
       "Powerful <strong>convection currents</strong> in the mantle carried the Indo-Australian Plate northward until it slammed into the Eurasian Plate at a <strong>convergent boundary</strong>. Because both plates consist of thick, buoyant continental crust, neither plate easily sinks into a <strong>subduction zone</strong>. Instead, the colliding crust crumples, folds, and pushes upward over millions of years, raising towering mountain peaks.",
     terms: ["Convection Currents", "Convergent Boundary", "Continental Uplift", "Crustal Folding"],
-    mapEmbed:
-      "https://openstreetmap.org",
+    coords: [27.9881, 86.9250],
+    zoom: 6,
     mapLabel: "Map: The Himalayan Mountain Range, Nepal/Tibet"
   }
 };
-
-
 
 const portDisplay = document.getElementById("port-display");
 const tabButtons = document.querySelectorAll(".tab-btn");
@@ -100,23 +88,25 @@ function buildPortCardHTML(data) {
       </div>
 
       <div class="map-container">
-        <iframe src="${data.mapEmbed}" loading="lazy" title="${data.mapLabel}"></iframe>
+        <div id="map-${data.id}" class="map-box"></div>
         <p class="map-caption">${data.mapLabel}</p>
       </div>
     </article>
   `;
 }
 
-
+function initMap(data) {
+  const map = L.map(`map-${data.id}`).setView(data.coords, data.zoom);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap contributors"
+  }).addTo(map);
+  L.marker(data.coords).addTo(map).bindPopup(data.title);
+}
 
 function renderPorts(selection) {
-  if (selection === "all") {
-    portDisplay.innerHTML = Object.values(portsData)
-      .map((port) => buildPortCardHTML(port))
-      .join("");
-  } else {
-    portDisplay.innerHTML = buildPortCardHTML(portsData[selection]);
-  }
+  const items = selection === "all" ? Object.values(portsData) : [portsData[selection]];
+  portDisplay.innerHTML = items.map((port) => buildPortCardHTML(port)).join("");
+  items.forEach((port) => initMap(port));
 }
 
 tabButtons.forEach((btn) => {
