@@ -17,7 +17,7 @@ body {
   padding: 0 20px;
 }
 
-/* Navbar & Hero */
+/* Top bar and stuff */
 .hero {
   background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #0284c7 100%);
   color: #ffffff;
@@ -88,7 +88,7 @@ body {
   background-color: #fbbf24;
 }
 
-/* Sections */
+/* sections and stuff */
 .section {
   padding: 55px 20px;
 }
@@ -113,7 +113,7 @@ h2 {
   margin-bottom: 24px;
 }
 
-/* Tabs */
+/* Tabs and stuff */
 .port-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -144,7 +144,7 @@ h2 {
   color: #ffffff;
 }
 
-/* Stacked Port Cards */
+/* port cards and stuff */
 .ports-stack {
   display: flex;
   flex-direction: column;
@@ -211,21 +211,22 @@ h2 {
   border-radius: 6px;
 }
 
-.map-container iframe {
+.map-box {
   width: 100%;
   height: 320px;
   border: 2px solid #e2e8f0;
   border-radius: 10px;
+  z-index: 1;
 }
 
-.map-caption {
+.-caption {
   font-size: 0.85rem;
   color: #64748b;
   margin-top: 8px;
   text-align: center;
 }
 
-/* Vocabulary Grid */
+/* Vocab terms tags */
 .vocab-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -246,7 +247,7 @@ h2 {
   color: #0f172a;
 }
 
-/* Footer */
+
 .footer {
   background-color: #0f172a;
   color: #cbd5e1;
