@@ -41,12 +41,12 @@ body {
 
 .nav-inner {
   max-width: 1140px;
-  height: 58px;
+  min-height: 64px;
   margin: 0 auto;
-  padding: 0 28px;
+  padding: 10px 28px;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   gap: 16px;
 }
@@ -54,7 +54,7 @@ body {
 .logo {
   color: #13293d;
   font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -65,18 +65,18 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  white-space: nowrap;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  align-items: center;
+  gap: 6px;
 }
 
-.contact -nav {
-  margin-left: auto;
+.contact-nav {
+  margin-left: 8px;
 }
 
 .nav-links a {
@@ -169,7 +169,7 @@ body {
 /* Editorial Split Hero */
 .hero-editorial {
   max-width: 1040px;
-  margin: 20px auto 70px;
+  margin: 40px auto 70px;
   padding: 0 28px;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -430,12 +430,89 @@ h2 {
   margin-bottom: 14px;
 }
 
+/* Multi-Column Footer (Citations Page) */
+.site-footer {
+  background-color: #eaf2f5;
+  border-top: 1px solid #d9e4e8;
+  padding: 50px 28px 30px;
+  margin-top: 60px;
+  color: #13293d;
+}
+
+.footer-columns {
+  max-width: 1140px;
+  margin: 0 auto 36px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 28px;
+}
+
+.footer-col h4 {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #9e7a36;
+  margin-bottom: 12px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  color: #13293d;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid #d9e4e8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-footer-outline {
+  display: inline-block;
+  border: 1px solid #13293d;
+  color: #13293d;
+  padding: 8px 18px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-footer-outline:hover {
+  background-color: #13293d;
+  color: #ffffff;
+}
+
+/* Bottom Contact Footer */
 .footer {
   background-color: #13293d;
   color: #d9e4e8;
   text-align: right;
-  padding: 18px 20px 36px;
-  margin-top: 60px;
+  padding: 28px 28px 48px;
   font-size: 0.85rem; 
   letter-spacing: 1px;
   border-top: 2px solid #c69f59;
