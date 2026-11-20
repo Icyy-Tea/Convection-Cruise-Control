@@ -41,10 +41,12 @@ body {
 
 .nav-inner {
   max-width: 1140px;
+  height: 58px;
   margin: 0 auto;
-  padding: 18px 28px;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  padding: 0 28px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   align-items: center;
   gap: 16px;
 }
