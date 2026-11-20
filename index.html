@@ -3,177 +3,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Convection Current Cruise</title>
+  <title>Pen Pineapple Apple Pen Cruises</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Top Promo Strip -->
   <div class="promo-bar">
-    <span>[TECTONIC DEAL]:</span> Free lava-proof life jackets on all 13,000-night bookings.
+    <span>TECTONIC DEAL:</span> Free lava-proof life jackets on all 13,000-night bookings.
   </div>
 
   <!-- Sticky Navbar -->
   <nav class="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="logo">Pen Pineapple Apple Pen Cruises</a>
-      <a class="hero-eyebrow">LUXURY EXPEDITIONS ACROSS EARTH’S CRUST</a>
-      <ul class="nav-links">...</ul>
-      <ul class="nav-links"><br><br>
+      <div class="nav-brand">
+        <a href="index.html" class="logo">Pen Pineapple Apple Pen Cruises</a>
+      </div>
+      <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="ridge.html">Mid-Atlantic Ridge</a></li>
         <li><a href="trench.html">The Mariana Trench</a></li>
         <li><a href="volcano.html">Mount Fuji</a></li>
         <li><a href="mountain.html">The Andes Mountains</a></li>
         <li><a href="citations.html">Works Cited</a></li>
-        <li class="contact-nav"><a href="#contact">Contact Us</a></li>
+        <li class="contact-nav"><a href="#contact" class="nav-cta">Contact Us</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1> Pen Pineapple Apple Pen Cruises</h1>
-    <p>[1-2 sentences introducing your cruise]</p>
-    <a href="ridge.html" class="btn-primary">[button text] →</a>
+  <!-- Editorial Split Hero -->
+  <header class="hero-editorial">
+    <div class="hero-quote">
+      <span class="badge">LUXURY EXPEDITIONS ACROSS EARTH’S CRUST</span>
+      <h1>Pen Pineapple Apple Pen Cruises</h1>
+      <p>[1-2 sentences introducing your cruise across Earth's tectonic plate boundaries]</p>
+      <a href="ridge.html" class="btn-primary">Explore Ports →</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/map-ridge.png" alt="Tectonic Plate Cruise Route">
+    </div>
   </header>
 
   <!-- Booking Bar -->
-  <div class="container">
-    <div class="booking-bar">
-      <div class="booking-field">
-        <label for="port-select">Destination</label>
-        <select id="port-select">
-          <option value="ridge.html">Mid-Atlantic Ridge (Thingvellir, Iceland)</option>
-          <option value="The Mariana Trench.html">The Mariana The Mariana Trench (Western Pacific Ocean)</option>
-          <option value="Mount Fuji.html">Mount Fuji (Honshu, Japan)</option>
-          <option value="mountain.html">The Andes Mountains (South America)</option>
-        </select>
-      </div>
-      <div class="booking-field">
-        <label for="sail-date">Departure</label>
-        <select id="sail-date">
-          <option>Spring 1990 (13,429-Night Voyage)</option>
-          <option>Summer 1492 (70-night voyage) </option>
-          <option>Fall 2127 (0.5-Night Expedition)</option>
-    
-        </select>
-      </div>
-      <div class="booking-field">
-        <label for="guests">Guests</label>
-        <select id="guests">
-          <option>2 Guests • Oceanview Suite</option>
-          <option>4 Guests • Tectonic Explorer Suite</option>
-          <option>67 Guests • Lavatory/option>
-        </select>
-      </div>
-      <button class="btn-primary" onclick="window.location.href=document.getElementById('port-select').value">
-        [go]
-      </button>
+  <div class="booking-bar">
+    <div class="booking-field">
+      <label for="port-select">Destination</label>
+      <select id="port-select">
+        <option value="ridge.html">Mid-Atlantic Ridge (Thingvellir, Iceland)</option>
+        <option value="trench.html">The Mariana Trench (Western Pacific Ocean)</option>
+        <option value="volcano.html">Mount Fuji (Honshu, Japan)</option>
+        <option value="mountain.html">The Andes Mountains (South America)</option>
+      </select>
     </div>
+    <div class="booking-field">
+      <label for="sail-date">Departure</label>
+      <select id="sail-date">
+        <option>Spring 1990 (13,429-Night Voyage)</option>
+        <option>Summer 1492 (70-Night Voyage)</option>
+        <option>Fall 2127 (0.5-Night Expedition)</option>
+      </select>
+    </div>
+    <div class="booking-field">
+      <label for="guests">Guests</label>
+      <select id="guests">
+        <option>2 Guests • Oceanview Suite</option>
+        <option>4 Guests • Tectonic Explorer Suite</option>
+        <option>67 Guests • Lavatory</option>
+      </select>
+    </div>
+    <button class="btn-primary" onclick="window.location.href=document.getElementById('port-select').value">
+      Book Now
+    </button>
   </div>
 
+  <!-- Featured Ports Band -->
+  <section class="featured-band">
+    <div class="container">
+      <div class="editorial-header">
+        <div>
+          <p class="editorial-italic">Four Tectonic Destinations</p>
+          <h2>Ports of Call</h2>
+        </div>
+        <p class="editorial-subcopy">
+          Journey along divergent and convergent boundaries to witness how heat from Earth's mantle shapes the surface above.
+        </p>
+      </div>
+
+      <div class="itinerary-grid">
+        <!-- Port 1 -->
+        <div class="itinerary-card">
+          <img src="assets/map-ridge.png" alt="Mid-Atlantic Ridge">
+          <div class="overlap-box">
+            <div>
+              <div class="itinerary-tag">Port 1 • Divergent Boundary</div>
+              <h3>Mid-Atlantic Ridge</h3>
+              <p>[Short sentence about Thingvellir, Iceland and seafloor spreading]</p>
+            </div>
+            <a href="ridge.html" class="explore-link">Explore Port →</a>
+          </div>
+        </div>
+
+        <!-- Port 2 -->
+        <div class="itinerary-card">
+          <img src="assets/map-trench.png" alt="The Mariana Trench">
+          <div class="overlap-box">
+            <div>
+              <div class="itinerary-tag">Port 2 • Subduction Zone</div>
+              <h3>The Mariana Trench</h3>
+              <p>[Short sentence about the Western Pacific Ocean and oceanic subduction]</p>
+            </div>
+            <a href="trench.html" class="explore-link">Explore Port →</a>
+          </div>
+        </div>
+
+        <!-- Port 3 -->
+        <div class="itinerary-card">
+          <img src="assets/map-volcano.png" alt="Mount Fuji">
+          <div class="overlap-box">
+            <div>
+              <div class="itinerary-tag">Port 3 • Volcanic Arc</div>
+              <h3>Mount Fuji</h3>
+              <p>[Short sentence about Honshu, Japan • Starting at $6,776 per guest]</p>
+            </div>
+            <a href="volcano.html" class="explore-link">Explore Port →</a>
+          </div>
+        </div>
+
+        <!-- Port 4 -->
+        <div class="itinerary-card">
+          <img src="assets/map-mountain.png" alt="The Andes Mountains">
+          <div class="overlap-box">
+            <div>
+              <div class="itinerary-tag">Port 4 • Convergent Boundary</div>
+              <h3>The Andes Mountains</h3>
+              <p>[Short sentence about South America and continental mountain building]</p>
+            </div>
+            <a href="mountain.html" class="explore-link">Explore Port →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Science Content -->
   <main class="container section">
-    <!-- 4 Ports Itinerary Cards -->
-    <div class="section-header">
-      <span>[small label]</span>
-      <h2>[section heading]</h2>
-    </div>
-
-    <div class="itinerary-grid">
-      <div class="itinerary-card">
-        <img src="assets/map-ridge.png" alt="Mid-Ocean Ridge">
-        <div class="itinerary-body">
-          <div class="itinerary-tag">Port 1 • Mid-Ocean Ridge</div>
-          <h3>Mid-Atlantic Ridge (Thingvellir, Iceland)</h3>
-          <p>[you can poop here</p>
-        </div>
-        <div class="itinerary-price">
-          <div class="price-text">
-            <small>[price label]</small>
-            <strong>$[price]</strong>
-          </div>
-          <a href="ridge.html" class="btn-outline">[link text]</a>
-        </div>
-      </div>
-
-      <div class="itinerary-card">
-        <img src="assets/map-The Mariana Trench.png" alt="The Mariana Trench">
-        <div class="itinerary-body">
-          <div class="itinerary-tag">Port 2 • The Mariana Trench</div>
-          <h3>The Mariana Trench<br>(Western Pacific Ocean)</h3>
-          <p>[short sentence about this stop]</p>
-        </div>
-        <div class="itinerary-price">
-          <div class="price-text">
-            <small>[price label]</small>
-            <strong>$[price]</strong>
-          </div>
-          <a href="The Mariana Trench.html" class="btn-outline">[link text]</a>
-        </div>
-      </div>
-
-      <div class="itinerary-card">
-        <img src="assets/map-Mount Fuji.png" alt="Mount Fuji">
-        <div class="itinerary-body">
-          <div class="itinerary-tag">Port 3 • Mount Fuji</div>
-          <h3>Mount Fuji<br>(Honshu, Japan)</h3>
-          <p>[short sentence about this stop]</p>
-        </div>
-        <div class="itinerary-price">
-          <div class="price-text">
-            <small>[Per Guest, From]</small>
-            <strong>$[6,776]</strong>
-          </div>
-          <a href="Mount Fuji.html" class="btn-outline">[link text]</a>
-        </div>
-      </div>
-
-      <div class="itinerary-card">
-        <img src="assets/map-mountain.png" alt="Mountain">
-        <div class="itinerary-body">
-          <div class="itinerary-tag">Port 4 • The Andes Mountains</div>
-          <h3>The Andes Mountains<br>(South America)</h3>
-          <p>[short sentence about this stop]</p>
-        </div>
-        <div class="itinerary-price">
-          <div class="price-text">
-            <small>[price label]</small>
-            <strong>$[price]</strong>
-          </div>
-          <a href="mountain.html" class="btn-outline">[link text]</a>
-        </div>
-      </div>
-    </div>
-
     <!-- Mantle Convection Explanation -->
     <div class="card">
-      <h2> Mantle Convection</h2>
-      <p>[explain how convection currents in the mantle heat up, rise, cool down, sink, and move the tectonic plates]</p>
+      <h2>Mantle Convection</h2>
+      <p>[Explain how convection currents in the mantle heat up near the core, become less dense and rise, cool down near the crust, become denser and sink, and drag the tectonic plates along]</p>
     </div>
 
     <!-- Vocabulary -->
-    <h2> Vocabulary</h2>
+    <h2>Key Vocabulary</h2>
     <div class="vocab-grid">
       <div class="vocab-box">
         <h3>Convection</h3>
-        <p>[define convection]</p>
+        <p>[Define convection]</p>
       </div>
       <div class="vocab-box">
         <h3>Divergent Boundary</h3>
-        <p>[define divergent boundary]</p>
+        <p>[Define divergent boundary]</p>
       </div>
       <div class="vocab-box">
         <h3>Convergent Boundary</h3>
-        <p>[define convergent boundary]</p>
+        <p>[Define convergent boundary]</p>
       </div>
       <div class="vocab-box">
         <h3>Subduction Zone</h3>
-        <p>[define subduction zone]</p>
+        <p>[Define subduction zone]</p>
       </div>
     </div>
   </main>
 
+  <!-- Footer -->
   <footer id="contact" class="footer" style="position: relative;">
     <small style="
       position: absolute;
@@ -194,7 +196,7 @@
         <span>Accessibility</span>
       </span>
     </small>
-    Aaron Thomas & Ishan Pentapalli — C Block<br>
+    Aaron Thomas &amp; Ishan Pentapalli — C Block<br>
     929-555-6274<br>
     athomas31@gdrsd.us<br>
     ipentapalli31@gdrsd.us
