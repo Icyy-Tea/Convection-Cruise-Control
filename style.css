@@ -60,6 +60,13 @@ body {
   text-decoration: none;
 }
 
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
