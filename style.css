@@ -192,6 +192,11 @@ body {
   border: 1px solid #d9e4e8;
 }
 
+.hero-eyebrow {
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
 /* Pale Seafoam Mist Featured Band */
 .featured-band {
   background-color: #eaf2f5;
