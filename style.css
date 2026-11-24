@@ -194,9 +194,12 @@ body {
 
 .hero-image img,
 .hero-image video {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  width: 200%;
+  height: 360px;
+  object-fit: cover;
+  background-color: #eaf2f5;
+  border: 1px solid #d9e4e8;
+  display: block;
 }
 
 
