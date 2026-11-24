@@ -192,13 +192,16 @@ body {
   margin-bottom: 24px;
 }
 
-.hero-image img {
+.hero-image img,
+.hero-image video {
   width: 100%;
   height: 360px;
   object-fit: cover;
   background-color: #eaf2f5;
   border: 1px solid #d9e4e8;
+  display: block;
 }
+
 
 .hero-eyebrow {
   margin-left: 10px;
